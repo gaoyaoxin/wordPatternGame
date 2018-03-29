@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: <utf-8> -*-
 
-import random
+import random, time
 import wordPatterns, wordLengths
 
 def getWordPattern(word):
@@ -34,10 +34,14 @@ while 1:
 	wordLengthInput = int(wordLengthInput)
 
 	generateWord(wordLengthInput)
-
+	startTime = time.time()
 	userAnswerWord = input('Please input a word with the same pattern or 0 if no word meets the requirement.\n> ')
 
 	userAnswerWordPattern = getWordPattern(userAnswerWord)
+
+	allTime = time.time() - startTime
+	allTime = round(allTime, 2)
+	print('Time you used: ' + str(allTime) + 's')
 
 	if userAnswerWordPattern == wordGeneratedPattern:
 		print('You win!')
