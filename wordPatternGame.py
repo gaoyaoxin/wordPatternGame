@@ -26,7 +26,7 @@ def generateWord(wordLength):
 	wordGenerated = wordLengths.allLengths[wordLength][random.randint(0, len(wordLengths.allLengths[wordLength]) - 1)]
 	global wordGeneratedPattern
 	wordGeneratedPattern = getWordPattern(wordGenerated)
-	print(wordGenerated)
+	print(wordGenerated.lower())
 	return wordGenerated
 
 while 1:
@@ -35,7 +35,7 @@ while 1:
 
 	generateWord(wordLengthInput)
 
-	userAnswerWord = input('Please input a word with the same pattern or 0 with no word meets the requirement.\n> ')
+	userAnswerWord = input('Please input a word with the same pattern or 0 if no word meets the requirement.\n> ')
 
 	userAnswerWordPattern = getWordPattern(userAnswerWord)
 
