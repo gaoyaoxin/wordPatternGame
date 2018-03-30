@@ -1,8 +1,19 @@
 #!/usr/bin/python
 # -*- coding: <utf-8> -*-
 
-import random, time
+import random, time, sys
 import wordPatterns, wordLengths
+
+def tprint(message, end='\n'):
+    for c in message:
+        sys.stdout.write(c)
+        sys.stdout.flush()
+        time.sleep(random.randint(40, 100)/ 1000)
+    sys.stdout.write(end)
+
+
+tprint('\n   ' + ' ' * 4 + 'a gaoyaoxin app' + ' ' * 4 + '   \n')
+
 
 def getWordPattern(word):
 	# Returns a string of the pattern form of the given word.
