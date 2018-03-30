@@ -66,5 +66,5 @@ while 1:
 			print('You lose! There are other words in this pattern:')
 			print('\n' + (', '.join(allOtherPossibleWordsInThisPattern)).lower() + '\n')
 	elif userAnswerWordPattern != wordGeneratedPattern:
-		print('You lose! The word you typed is not the same pattern as')
+		print('You lose! The word you typed is not the same pattern as the given one.')
 	
