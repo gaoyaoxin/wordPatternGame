@@ -1,1 +1,0 @@
-wordPatternGame.exe & pause
