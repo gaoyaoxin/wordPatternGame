@@ -39,13 +39,13 @@ def generateWord(wordLength):
 	return wordGenerated
 
 def getWordGeneratedPattern():
-	global wordGeneratedPattern
+	
 	wordGeneratedPattern = getWordPattern(wordGenerated)
 	print(wordGenerated.lower())
 	return wordGenerated
 
 
-while 1:
+def main():
 	wordLengthInput = input('Please input word length (3-22, 28):\n> ')
 	wordLengthInput = int(wordLengthInput)
 
@@ -64,7 +64,6 @@ while 1:
 	elif userAnswerWordPattern == wordGeneratedPattern and (userAnswerWord.upper() not in entryList.wordList):
 		print('You lose! The word you input is not English!')
 	elif userAnswerWord == '0':
-		allOtherPossibleWordsInThisPattern = []
 		allOtherPossibleWordsInThisPattern = (wordPatterns.allPatterns[wordGeneratedPattern])
 		allOtherPossibleWordsInThisPattern.remove(wordGenerated)
 #		print(allOtherPossibleWordsInThisPattern)
@@ -76,3 +75,5 @@ while 1:
 	elif userAnswerWordPattern != wordGeneratedPattern:
 		print('You lose! The word you typed is not the same pattern as the given one.')
 	
+while 1:
+	main()
